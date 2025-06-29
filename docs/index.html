@@ -22,10 +22,10 @@
     <li>Ejecutá el servidor:
       <pre><code>python servidor.py</code></pre>
     </li>
-    <li>Probalo desde el navegador en <code>http://localhost:5000</code></li>
+    <li>Probalo desde el navegador en <code>http://localhost:5000/login</code></li>
   </ol>
 
-  <h2>🧪 Capturas de pantalla</h2>
+  <h2>📸 Capturas de pantalla</h2>
   <h3>Registro de usuario</h3>
   <img src="registro de usuario.png" alt="Registro exitoso">
 
@@ -38,15 +38,15 @@
   <h2>📚 Conceptos clave</h2>
   <h3>🔐 ¿Por qué hashear contraseñas?</h3>
   <p>
-    Hashear contraseñas protege a los usuarios si la base de datos es comprometida. El hashing convierte la contraseña en una representación irreversible que no se puede desencriptar. Además, evita que contraseñas comunes puedan ser adivinadas fácilmente.
+    Hashear contraseñas es una práctica esencial de seguridad porque protege las contraseñas de los usuarios en caso de que la base de datos sea comprometida, ya que impide que se vean en texto plano. Al ser funciones unidireccionales, los hashes no pueden revertirse fácilmente, lo que dificulta que un atacante obtenga la contraseña original. Además, el uso de técnicas como el salting y algoritmos de hash seguros como bcrypt o Argon2 ayuda a prevenir ataques por diccionario, tablas rainbow y fuerza bruta, haciendo mucho más difícil vulnerar las credenciales almacenadas.
   </p>
 
   <h3>🗃️ ¿Por qué usar SQLite?</h3>
   <p>
-    SQLite es ideal para proyectos pequeños o educativos como este. No requiere instalación de servidor, es liviano, y almacena la base de datos en un archivo local. Es fácil de usar y muy portable.
+    SQLite es una buena opción para proyectos pequeños o aplicaciones que no requieren un servidor de base de datos dedicado, debido a su facilidad de uso, portabilidad y bajo consumo de recursos. Es ideal para aplicaciones móviles, software embebido y proyectos de desarrollo o pruebas donde la complejidad es mínima. 
   </p>
 
-  <h2>📌 Autor</h2>
+  <h2>👨‍💻 Autor</h2>
   <p>Fernando Maciel</p>
 </body>
 </html>
