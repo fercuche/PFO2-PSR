@@ -1,17 +1,16 @@
-# 🚀 API REST - Sistema de Gestión de Tareas
+# API REST - Sistema de Gestión de Tareas
 
 Un servidor API Flask que proporciona funcionalidades de registro de usuarios, autenticación y gestión de tareas con persistencia en SQLite.
 
-## 📋 Características
+## Características
 
-- ✅ **Registro de Usuarios**: Endpoint POST `/registro` con contraseñas hasheadas
-- ✅ **Inicio de Sesión**: Endpoint POST `/login` con verificación de credenciales
-- ✅ **Gestión de Tareas**: Endpoint GET `/tareas` con HTML de bienvenida
-- ✅ **Base de Datos SQLite**: Persistencia de datos
-- ✅ **Seguridad**: Contraseñas hasheadas con bcrypt
-- ✅ **Sesiones**: Sistema de autenticación con sesiones
+-  **Registro de Usuarios**: Endpoint POST `/registro` con contraseñas hasheadas
+-  **Inicio de Sesión**: Endpoint POST `/login` con verificación de credenciales
+-  **Gestión de Tareas**: Endpoint GET `/tareas` con HTML de bienvenida
+-  **Base de Datos SQLite**: Persistencia de datos
+-  **Seguridad**: Contraseñas hasheadas con werkzeug.security
 
-## 🛠️ Instalación
+##  Instalación
 
 1. **Clonar o descargar el proyecto**
 2. **Instalar dependencias**:
@@ -19,15 +18,15 @@ Un servidor API Flask que proporciona funcionalidades de registro de usuarios, a
    pip install -r requirements.txt
    ```
 
-## 🚀 Ejecución
+##  Ejecución
 
 ```bash
 python servidor.py
 ```
 
-El servidor se ejecutará en `http://localhost:5000`
+El servidor se ejecutará en `http://localhost:5000/login`
 
-## 📡 Endpoints Disponibles
+##  Endpoints Disponibles
 
 ### 1. Registro de Usuario
 - **URL**: `POST /registro`
@@ -95,7 +94,7 @@ El servidor se ejecutará en `http://localhost:5000`
   }
   ```
 
-## 🧪 Pruebas con cURL
+##  Pruebas con cURL
 
 ### Registrar un usuario:
 ```bash
@@ -124,7 +123,7 @@ curl -X GET http://localhost:5000/logout \
   -b cookies.txt
 ```
 
-## 🗄️ Base de Datos
+##  Base de Datos
 
 El sistema utiliza SQLite con dos tablas principales:
 
@@ -142,14 +141,14 @@ El sistema utiliza SQLite con dos tablas principales:
 - `completada`: Estado de la tarea
 - `fecha_creacion`: Timestamp de creación
 
-## 🔒 Seguridad
+##  Seguridad
 
 - **Contraseñas hasheadas**: Se utilizan hashes bcrypt para almacenar contraseñas
 - **Sesiones**: Sistema de sesiones para mantener la autenticación
 - **Validación**: Validación de datos de entrada
 - **Manejo de errores**: Respuestas de error apropiadas
 
-## 📁 Estructura del Proyecto
+##  Estructura del Proyecto
 
 ```
 API_REST/
@@ -159,7 +158,7 @@ API_REST/
 └── usuarios.db         # Base de datos SQLite (se crea automáticamente)
 ```
 
-## 🎨 Características de la UI
+##  Características de la UI
 
 La página de bienvenida incluye:
 - Diseño moderno y responsivo
@@ -168,10 +167,3 @@ La página de bienvenida incluye:
 - Tarjetas de características del sistema
 - Lista de endpoints disponibles
 - Botón de cierre de sesión
-
-## ⚠️ Notas Importantes
-
-- En producción, cambiar la `secret_key` por una clave segura
-- La base de datos se crea automáticamente al ejecutar el servidor
-- El modo debug está habilitado para desarrollo
-- Las contraseñas nunca se almacenan en texto plano 
